@@ -1,0 +1,215 @@
+/* Style Adventure — site styles.
+   Palette is taken from the game's own runtime colours: the pink is the exact
+   equipped-card / active-chip colour, Color(1f, 0.45f, 0.68f) = #FF73AD.
+   No external fonts or assets: a page that promises no tracking shouldn't
+   quietly call out to a third-party CDN. */
+
+:root {
+  --paper:  #FBF7F4;
+  --raised: #FFFFFF;
+  --ink:    #241E24;
+  --thread: #6B5F6C;
+  --edge:   #EADFE4;
+  --blush:  #FF73AD;
+  --blush-ink: #8E2F58;
+  --focus:  #2F6BD8;
+
+  --measure: 34rem;
+  --display: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system,
+             BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --body: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system,
+          BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:  #16131A;
+    --raised: #201C26;
+    --ink:    #F0EAEF;
+    --thread: #B0A5B2;
+    --edge:   #342E3A;
+    --blush:  #FF8FBF;
+    --blush-ink: #FFC2DA;
+    --focus:  #8FB4FF;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 1.5rem 6rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; }
+
+/* ---- masthead ---------------------------------------------------------- */
+
+header.masthead {
+  padding: 3.5rem 0 0;
+  margin-bottom: 2.5rem;
+}
+
+.wordmark {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--thread);
+  text-decoration: none;
+  margin-bottom: 1.75rem;
+}
+.wordmark:hover { color: var(--ink); }
+
+/* The pink pill is a direct quote of the game's active category chip. */
+.chip {
+  display: inline-block;
+  background: var(--blush);
+  color: #2B1020;
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: var(--display);
+  font-size: clamp(2.1rem, 7vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.028em;
+  line-height: 1.08;
+  margin: 0 0 0.75rem;
+}
+
+.dateline {
+  color: var(--thread);
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+/* ---- section chip row: the closet's horizontal category strip ---------- */
+
+nav.rail {
+  margin: 2.5rem 0 3rem;
+  padding-bottom: 0.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+nav.rail ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+}
+nav.rail a {
+  display: block;
+  white-space: nowrap;
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--thread);
+  background: var(--raised);
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  transition: color .15s, border-color .15s;
+}
+nav.rail a:hover { color: var(--ink); border-color: var(--blush); }
+
+/* ---- prose ------------------------------------------------------------- */
+
+main h2 {
+  font-family: var(--display);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.3;
+  margin: 3rem 0 0.75rem;
+  scroll-margin-top: 1.5rem;
+}
+main h2 .num {
+  color: var(--blush-ink);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.5rem;
+}
+
+p { margin: 0 0 1.1rem; }
+ul.plain { padding-left: 1.15rem; margin: 0 0 1.1rem; }
+ul.plain li { margin: 0.35rem 0; }
+
+a { color: var(--ink); text-decoration-color: var(--blush); text-underline-offset: 0.18em; }
+a:hover { color: var(--blush-ink); }
+
+strong { font-weight: 650; }
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- callout: the cream panel from the board UI ------------------------ */
+
+.callout {
+  background: var(--raised);
+  border: 1px solid var(--edge);
+  border-left: 3px solid var(--blush);
+  border-radius: 10px;
+  padding: 1.15rem 1.25rem;
+  margin: 0 0 2rem;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* ---- home page --------------------------------------------------------- */
+
+.lede { font-size: 1.1875rem; line-height: 1.6; color: var(--ink); }
+
+.doclist { list-style: none; padding: 0; margin: 2rem 0 0; }
+.doclist li { border-top: 1px solid var(--edge); }
+.doclist li:last-child { border-bottom: 1px solid var(--edge); }
+.doclist a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: var(--ink);
+}
+.doclist a:hover .title { color: var(--blush-ink); }
+.doclist .title { font-family: var(--display); font-weight: 650; font-size: 1.0625rem; }
+.doclist .note { color: var(--thread); font-size: 0.9375rem; margin-left: auto; text-align: right; }
+
+/* ---- footer ------------------------------------------------------------ */
+
+footer.foot {
+  margin-top: 4.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--edge);
+  color: var(--thread);
+  font-size: 0.9rem;
+}
+footer.foot a { color: var(--thread); }
+footer.foot p { margin: 0 0 0.4rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
