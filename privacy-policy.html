@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy - Style Adventure: Merge</title>
-<meta name="description" content="Privacy policy for the Android game Style Adventure: Merge. We collect no personal data ourselves; the game shows opt-in rewarded video ads through Google AdMob, which collects a limited set of data described here.">
+<meta name="description" content="Privacy policy for the Android game Style Adventure: Merge. We collect no personal data ourselves; the game shows opt-in rewarded video ads through Google AdMob and offers optional in-app purchases through Google Play, both of which involve data described here.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,6 +25,7 @@
     <li><a href="#device">Stored on your device</a></li>
     <li><a href="#sharing">Sharing pictures</a></li>
     <li><a href="#ads">Advertising</a></li>
+    <li><a href="#purchases">Purchases</a></li>
     <li><a href="#choices">Your ad choices</a></li>
     <li><a href="#children">Children</a></li>
     <li><a href="#rights">Your rights</a></li>
@@ -38,12 +39,14 @@
 <main>
 
 <div class="callout">
-  <p><strong>The short version:</strong> we run no servers and receive nothing about you. There are
-  no accounts, no analytics, and no in-app purchases, and your game progress never leaves your
-  device. The one exception is advertising: the game offers optional rewarded videos through Google
-  AdMob, and Google's advertising software collects a limited set of data - your IP address, how you
-  interact with the ads and the app, diagnostic information, and device identifiers. Ads are never
-  personalised, for anyone, at any age.</p>
+  <p><strong>The short version:</strong> we run no servers, we have no accounts, we use no
+  analytics, and your game progress never leaves your device. Two things do involve other people's
+  software. <strong>Advertising:</strong> the game offers optional rewarded videos through Google
+  AdMob, and Google's advertising software collects your IP address, how you interact with the ads
+  and the app, diagnostic information, and device identifiers. Ads are never personalised, for
+  anyone, at any age. <strong>Purchases:</strong> the game offers optional packs of Gems, and those
+  are handled entirely by Google Play - we never see or receive a card number, and we are told only
+  that a purchase succeeded.</p>
 </div>
 
 <h2 id="who"><span class="num">1</span>Who this policy is from</h2>
@@ -90,9 +93,21 @@
   the data above may be collected even if you never choose to watch an ad during that session.
 </p>
 <p>
+  <strong>Google Play handles purchases.</strong> The game offers optional packs of Gems (see
+  section 6). Every part of a purchase - showing the price, taking payment, and confirming it - is
+  performed by the Google Play Store app, not by the game. Google collects the payment and account
+  information it needs to process the transaction, under its own privacy policy. What reaches the
+  game is only Google's confirmation that a purchase of a given product completed, together with a
+  transaction identifier we store on your device so a single purchase cannot be credited twice.
+  <strong>We never see, receive, or store your name, billing address, card number, or any other
+  payment detail.</strong> Our Google Play developer account shows us only anonymous, aggregate
+  sales totals - for example, how many packs of a given size sold in a day.
+</p>
+<p>
   Beyond this, nothing is collected. The game contains no analytics, attribution, crash-reporting, or
-  social-network toolkit, and the Unity engine's own analytics, ads, purchasing, and crash-reporting
-  services are all switched off in the build.
+  social-network toolkit, and the Unity engine's own analytics, ads, and crash-reporting services are
+  all switched off in the build. The engine's purchasing component is present only to speak to Google
+  Play Billing, and reports nothing to Unity or to us.
 </p>
 
 <h2 id="device"><span class="num">3</span>What the game stores on your device</h2>
@@ -107,6 +122,7 @@
   <li>Your settings: music, sound, vibration, and language</li>
   <li>How many rewarded videos you have watched today, so the game can keep to its own daily limits</li>
   <li>A randomly generated 8-character Player ID</li>
+  <li>Identifiers of recent completed purchases, so a purchase cannot be credited to you twice</li>
 </ul>
 <p>
   The <strong>Player ID</strong> is a random string created on your device the first time you play.
@@ -158,12 +174,31 @@
 <p><strong>What we do not do:</strong> we do not build a profile of you, we do not track you across
   other apps or websites, we do not sell data, and we receive no personal information about you from
   Google.</p>
+<h2 id="purchases"><span class="num">6</span>In-app purchases</h2>
 <p>
-  <strong>In-app purchases:</strong> the game contains none. There is no way to spend real money in
-  it, so no payment or billing information is ever involved.
+  The game offers optional packs of Gems for real money. Nothing in the game requires them: Gems are
+  also earned by levelling up, completing orders, winning the daily contest, and watching rewarded
+  videos, and the game can be played and finished without ever spending anything.
 </p>
+<ul class="plain">
+  <li><strong>Google Play takes the payment, not us.</strong> Tapping a pack opens the Google Play
+    purchase screen. Everything from that point - the price shown, the payment method, and the
+    confirmation - is handled by Google under the
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and Google Play's own
+    terms. We receive no payment details of any kind.</li>
+  <li><strong>What the game is told.</strong> Only that a purchase of a particular pack completed,
+    plus a transaction identifier. That identifier is stored in the local save file described in
+    section 3 and is never sent anywhere.</li>
+  <li><strong>Parental controls apply.</strong> Google Play's own protections - requiring
+    authentication for every purchase, and family approval where a family group is set up - are
+    what govern whether a purchase can be made on a device. We recommend parents turn purchase
+    authentication on; it is in the Google Play Store app under Settings.</li>
+  <li><strong>We never prompt you to buy.</strong> Packs sit in the Shop's Gems tab and appear only
+    when you open it. Nothing in the game interrupts play to advertise them, and no pack is ever
+    presented as urgent or time-limited.</li>
+</ul>
 
-<h2 id="choices"><span class="num">6</span>Your ad choices and controls</h2>
+<h2 id="choices"><span class="num">7</span>Your ad choices and controls</h2>
 <p>
   Even though this game requests only non-personalised ads, Android gives you controls over
   advertising that apply across all of your apps:
@@ -178,7 +213,7 @@
     you ask for one.</li>
 </ul>
 
-<h2 id="children"><span class="num">7</span>Children's privacy</h2>
+<h2 id="children"><span class="num">8</span>Children's privacy</h2>
 <p>
   This game is made for a general audience, and we expect children to play it. We designed it
   accordingly:
@@ -189,7 +224,10 @@
   <li>Every ad request is flagged to Google as <strong>child-directed</strong>, with ad content
     capped at rating <strong>G</strong>, so no child ever receives a personalised or age-inappropriate
     ad from this game.</li>
-  <li>There is <strong>nothing to buy</strong>, so a child cannot spend a parent's money.</li>
+  <li>The game offers <strong>optional Gem packs</strong>. Whether a child can buy one is decided
+    by Google Play's purchase authentication and family settings on the device, not by us - and
+    every Gem a pack contains can also be earned by playing. Parents: purchase authentication is in
+    the Google Play Store app under Settings, and we would encourage you to switch it on.</li>
   <li>There is no chat, no messaging, no user accounts, and no way for players to contact each other.</li>
 </ul>
 <p>
@@ -199,7 +237,7 @@
   <a href="mailto:info@ragazis.com">info@ragazis.com</a> and we will act on it promptly.
 </p>
 
-<h2 id="rights"><span class="num">8</span>Your rights</h2>
+<h2 id="rights"><span class="num">9</span>Your rights</h2>
 <p>
   Privacy laws including the EU General Data Protection Regulation (GDPR) give you rights to access,
   correct, delete, export, and object to the processing of personal data held about you.
@@ -211,9 +249,10 @@
   <strong>Settings &rarr; Reset Progress</strong>, or by uninstalling the game.
 </p>
 <p>
-  <strong>From Google:</strong> the advertising data described in section 2 is collected and held by
-  Google, which acts as its own data controller for it. To exercise your rights over that data,
-  please use the controls in section 6 and the tools described in the
+  <strong>From Google:</strong> the advertising data described in section 2, and the purchase and
+  payment data described in sections 2 and 6, are collected and held by Google, which acts as its
+  own data controller for them. To exercise your rights over that data,
+  please use the controls in section 7 and the tools described in the
   <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We are happy to help point
   you in the right direction - just write to us - but we have no access to that data and cannot
   retrieve or delete it on your behalf.
@@ -224,7 +263,7 @@
   (<em>Datu valsts inspekcija</em>).
 </p>
 
-<h2 id="security"><span class="num">9</span>Retention and security</h2>
+<h2 id="security"><span class="num">10</span>Retention and security</h2>
 <p>
   We retain no data about you, so there is nothing for us to store or secure on your behalf. Your
   save file stays on your own device for as long as the game is installed, protected by Android's
@@ -236,7 +275,7 @@
   <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
 </p>
 
-<h2 id="third"><span class="num">10</span>Third parties</h2>
+<h2 id="third"><span class="num">11</span>Third parties</h2>
 <p>
   We do not sell, rent, or trade personal data with anyone. The only third party that receives any
   data in connection with this game is <strong>Google</strong>, in the following ways:
@@ -246,6 +285,8 @@
     the data listed in section 2, for advertising, analytics, and fraud prevention.</li>
   <li><strong>Google Play</strong> - distributes the game and collects its own data in connection
     with that distribution, independently of the game itself.</li>
+  <li><strong>Google Play Billing</strong> - processes in-app purchases, including the payment and
+    account data needed to do so, as described in section 6.</li>
 </ul>
 <p>
   Both are governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
@@ -257,14 +298,14 @@
   This website itself uses no cookies, no analytics, and no external fonts or scripts.
 </p>
 
-<h2 id="changes"><span class="num">11</span>Changes to this policy</h2>
+<h2 id="changes"><span class="num">12</span>Changes to this policy</h2>
 <p>
   If this policy changes, the updated version will be posted at this same address with a new "last
   updated" date. Significant changes - particularly any that introduce new data collection - will
   appear here before the version of the game making that change is released.
 </p>
 
-<h2 id="contact"><span class="num">12</span>Contact</h2>
+<h2 id="contact"><span class="num">13</span>Contact</h2>
 <p>
   Questions, concerns, or requests about this policy:
   <a href="mailto:info@ragazis.com">info@ragazis.com</a>.
